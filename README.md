@@ -10,7 +10,7 @@ Além disso, a plataforma pretende beneficiar principalmente pessoas de baixa re
 
 * Login de usuários;
 * Agendamento de consultas;
-* Consulta das datas das disponíveis;
+* Consulta das datas disponíveis;
 * Visualização das consultas realizadas.
 
 ## 🛠️ Tecnologias utilizadas
