@@ -1,0 +1,798 @@
+/* ==========================
+   RESET
+========================== */
+
+/* ==========================
+   RESET
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#eef2f7;
+    color:#222;
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+header{
+    width:100%;
+    height:100px;
+    background:#fff;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 40px;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+
+.logo img{
+    width:290px;
+    height:auto;
+}
+
+nav{
+    display:flex;
+    gap:25px;
+}
+
+nav a{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    text-decoration:none;
+    color:#444;
+    padding:12px 22px;
+    border-radius:12px;
+    transition:.3s;
+    font-size:18px;
+}
+
+nav a:hover{
+    background:#edf5ff;
+}
+
+nav .active{
+    background:#1565b1;
+    color:#fff;
+}
+
+.perfil i{
+    font-size:55px;
+    color:#666;
+}
+
+/* ==========================================================================
+   MENU HAMBÚRGUER (MOBILE)
+   ========================================================================== */
+
+.menu-toggle {
+  display: none;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-toggle span {
+  width: 28px;
+  height: 3px;
+  background: #333;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(10px, 10px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+nav.desktop-nav {
+  display: flex;
+}
+
+nav.mobile-menu {
+  opacity: 0;
+  display: none;
+  position: fixed;
+  top: 100px;
+  left: 0;
+  right: 0;
+  background: white;
+  flex-direction: column;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 0;
+  z-index: 999;
+}
+
+nav.mobile-menu.active {
+  opacity: 1;
+  max-height: 400px;
+  padding: 10px 0;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+nav.mobile-menu a {
+  width: 100%;
+  padding: 14px 20px;
+  border-radius: 0;
+  border-bottom: 1px solid #eee;
+  justify-content: flex-start;
+  font-size: 16px;
+}
+
+/* ==========================
+   MAIN
+========================== */
+
+main{
+    padding:40px 20px;
+}
+
+main h1{
+    text-align:center;
+    font-size:44px;
+    font-weight:600;
+    margin-bottom:35px;
+    letter-spacing:1px;
+}
+
+/* ==========================
+   CONTAINER
+========================== */
+
+.container{
+    max-width:980px;
+    margin:auto;
+    background:#fff;
+    border-radius:22px;
+    padding:40px;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+
+.container label{
+    display:block;
+    text-align:center;
+    font-size:22px;
+    margin-bottom:18px;
+    color:#444;
+}
+
+.container input{
+    width:70%;
+    height:50px;
+    display:block;
+    margin:auto;
+    border:1px solid #cfd8e4;
+    background:#f8f9fa;
+    color:#333;
+    border-radius:8px;
+    padding:0 18px;
+    font-size:16px;
+    transition:.3s;
+}
+
+.container input::placeholder{
+    color:#999;
+}
+
+.container input:focus{
+    outline:none;
+    border-color:#1565b1;
+    box-shadow:0 0 0 4px rgba(21,101,177,.1);
+}
+
+.container h3{
+    margin-top:35px;
+    margin-bottom:20px;
+    font-size:22px;
+    font-weight:500;
+    color:#333;
+}
+
+/* ==========================
+   DATAS
+========================== */
+
+.datas{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+#listaDias{
+    display:flex;
+    gap:18px;
+    flex:1;
+    overflow-x:auto;
+    scrollbar-width:none;
+}
+
+#listaDias::-webkit-scrollbar{
+    display:none;
+}
+
+.dia{
+    width:105px;
+    height:118px;
+    border:2px solid #e0e6f0;
+    border-radius:16px;
+    background: linear-gradient(135deg, #f8f9fb 0%, #f0f3f8 100%);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    transition: all 0.3s ease;
+    flex-shrink:0;
+    color:#333;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.dia:hover{
+    transform: translateY(-6px);
+    border-color: #1565b1;
+    box-shadow: 0 8px 16px rgba(21, 101, 177, 0.15);
+    background: linear-gradient(135deg, #f0f3f8 0%, #e8ecf3 100%);
+}
+
+.dia span{
+    font-size:14px;
+    font-weight:600;
+    color:#7a8fa6;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.dia strong{
+    font-size:36px;
+    line-height:1;
+    margin:10px 0 6px;
+    color:#1565b1;
+    font-weight: 700;
+}
+
+.dia small{
+    font-size:13px;
+    color:#9ca8b8;
+    font-weight: 500;
+}
+
+.dia.ativo{
+    background: linear-gradient(135deg, #1565b1 0%, #0d4a8f 100%);
+    color:#fff;
+    border-color:#1565b1;
+    box-shadow: 0 8px 20px rgba(21, 101, 177, 0.25);
+}
+
+.dia.ativo span,
+.dia.ativo small{
+    color:#e8f0f9;
+}
+
+.dia.ativo strong{
+    color: #fff;
+}
+
+/* ==========================
+   BOTÃO SETA
+========================== */
+
+.proximo{
+    width:58px;
+    height:58px;
+    border:none;
+    border-radius:50%;
+    background:#1565b1;
+    color:#fff;
+    font-size:24px;
+    cursor:pointer;
+    transition:.3s;
+    flex-shrink:0;
+}
+
+.proximo:hover{
+    background:#0f4f8d;
+    transform:scale(1.05);
+}
+
+/* ==========================
+   HORÁRIOS
+========================== */
+
+.horarios{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.horario{
+    width:115px;
+    height:56px;
+    border-radius:10px;
+    border:1px solid #d0d7e0;
+    background:#f8f9fa;
+    color:#333;
+    font-size:22px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.25s;
+}
+
+.horario:hover{
+    border-color:#1565b1;
+    transform:translateY(-2px);
+    background:#f0f5ff;
+}
+
+.horario.selecionado{
+    background:#1565b1;
+    border-color:#1565b1;
+    color:#fff;
+}
+
+/* ==========================
+   BOTÕES
+========================== */
+
+.acoes{
+    margin-top:45px;
+    display:flex;
+    justify-content:center;
+    gap:35px;
+}
+
+.acoes button{
+    width:260px;
+    height:58px;
+    border:none;
+    border-radius:12px;
+    background:#1565b1;
+    color:#fff;
+    font-size:22px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.acoes button:hover{
+    background:#0f4f8d;
+    transform:translateY(-2px);
+}
+
+/* ==========================
+   RESPONSIVO
+========================== */
+
+@media(max-width:992px){
+
+header{
+    flex-direction:column;
+    height:auto;
+    padding:20px;
+    gap:20px;
+}
+
+nav{
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.container{
+    width:95%;
+    padding:30px;
+}
+
+.container input{
+    width:100%;
+}
+
+.datas{
+    flex-direction:column;
+}
+
+#listaDias{
+    width:100%;
+}
+
+.acoes{
+    flex-direction:column;
+    align-items:center;
+}
+
+.acoes button{
+    width:100%;
+    max-width:350px;
+}
+
+}
+
+@media(max-width:600px){
+
+main h1{
+    font-size:32px;
+}
+
+.container{
+    padding:20px;
+}
+
+.container label{
+    font-size:18px;
+}
+
+.dia{
+    width:90px;
+    height:100px;
+}
+
+.dia span{
+    font-size:16px;
+}
+
+.dia strong{
+    font-size:30px;
+}
+
+.dia small{
+    font-size:15px;
+}
+
+.horario{
+    width:calc(50% - 8px);
+    font-size:20px;
+}
+
+.proximo{
+    width:50px;
+    height:50px;
+}
+
+}
+
+/* ==========================
+   RESPONSIVIDADE ADICIONAL - TABLET (até 880px)
+========================== */
+
+@media (max-width: 880px) {
+  header {
+    padding: 0 30px;
+  }
+
+  .logo img {
+    width: 220px;
+  }
+
+  nav {
+    gap: 15px;
+  }
+
+  nav a {
+    font-size: 16px;
+    padding: 10px 14px;
+  }
+
+  main h1 {
+    font-size: 40px;
+  }
+
+  .container {
+    padding: 35px;
+  }
+
+  .container label {
+    font-size: 20px;
+  }
+
+  .container h3 {
+    font-size: 20px;
+  }
+
+  .dia {
+    width: 100px;
+    height: 115px;
+  }
+
+  .horario {
+    width: 110px;
+    height: 54px;
+    font-size: 20px;
+  }
+
+  .acoes button {
+    width: 240px;
+    font-size: 20px;
+  }
+}
+
+/* ==========================
+   RESPONSIVIDADE ADICIONAL - MOBILE (até 760px)
+========================== */
+
+@media (max-width: 760px) {
+  header {
+    padding: 12px 16px;
+    height: auto;
+    flex-direction: row;
+    gap: 12px;
+    flex-wrap: nowrap;
+  }
+
+  .logo img {
+    width: 180px;
+    flex-shrink: 0;
+  }
+
+  nav.desktop-nav {
+    display: none !important;
+  }
+
+  .menu-toggle {
+    display: flex;
+    order: 2;
+    margin-left: auto;
+  }
+
+  .perfil {
+    order: 3;
+    flex-shrink: 0;
+  }
+
+  .perfil i {
+    font-size: 32px;
+  }
+
+  nav.mobile-menu {
+    display: flex;
+  }
+
+  nav.mobile-menu.active {
+    max-height: 400px;
+    padding: 10px 0;
+  }
+
+  nav.mobile-menu a {
+    width: 100%;
+    padding: 14px 20px;
+    border-radius: 0;
+    border-bottom: 1px solid #eee;
+  }
+
+  nav.mobile-menu a:last-child {
+    border-bottom: none;
+  }
+
+  main {
+    padding: 24px 16px;
+  }
+
+  main h1 {
+    font-size: 32px;
+    margin-bottom: 24px;
+  }
+
+  .container {
+    padding: 24px;
+    max-width: 100%;
+  }
+
+  .container label {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+
+  .container input {
+    width: 100%;
+    height: 45px;
+    font-size: 14px;
+  }
+
+  .container h3 {
+    font-size: 18px;
+    margin-top: 24px;
+    margin-bottom: 16px;
+  }
+
+  .datas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    width: 100%;
+    margin: 24px auto;
+    padding: 0 8px;
+    max-width: 280px;
+    justify-content: center;
+  }
+
+  #listaDias {
+    width: 100%;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .dia {
+    width: 100%;
+    height: 110px;
+    padding: 12px 8px;
+  }
+
+  .dia span {
+    font-size: 12px;
+  }
+
+  .dia strong {
+    font-size: 24px;
+  }
+
+  .dia small {
+    font-size: 12px;
+  }
+
+  .proximo {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+
+  .horarios {
+    gap: 12px;
+    grid-template-columns: 1fr;
+  }
+
+  .horario {
+    width: 100%;
+    height: 50px;
+    font-size: 16px;
+  }
+
+  .acoes {
+    margin-top: 32px;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .acoes button {
+    width: 100%;
+    height: 50px;
+    font-size: 16px;
+  }
+}
+
+/* ==========================
+   RESPONSIVIDADE ADICIONAL - MOBILE PEQUENO (até 480px)
+========================== */
+
+@media (max-width: 480px) {
+  header {
+    padding: 10px 12px;
+    gap: 8px;
+  }
+
+  .logo img {
+    width: 140px;
+  }
+
+  nav {
+    gap: 6px;
+  }
+
+  nav a {
+    font-size: 11px;
+    padding: 6px 8px;
+  }
+
+  nav a i {
+    font-size: 16px;
+  }
+
+  .perfil i {
+    font-size: 28px;
+  }
+
+  main {
+    padding: 16px 12px;
+  }
+
+  main h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .container {
+    padding: 16px;
+  }
+
+  .container label {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+
+  .container input {
+    width: 100%;
+    height: 42px;
+    font-size: 13px;
+  }
+
+  .container h3 {
+    font-size: 16px;
+    margin-top: 18px;
+    margin-bottom: 12px;
+  }
+
+  .datas {
+    gap: 12px;
+  }
+
+  #listaDias {
+    gap: 10px;
+  }
+
+  .dia {
+    width: 75px;
+    height: 100px;
+  }
+
+  .dia span {
+    font-size: 12px;
+  }
+
+  .dia strong {
+    font-size: 24px;
+    margin: 4px 0;
+  }
+
+  .dia small {
+    font-size: 12px;
+  }
+
+  .proximo {
+    width: 48px;
+    height: 48px;
+    font-size: 18px;
+  }
+
+  .horarios {
+    gap: 8px;
+  }
+
+  .horario {
+    width: calc(50% - 4px);
+    height: 46px;
+    font-size: 15px;
+  }
+
+  .acoes {
+    margin-top: 24px;
+    gap: 10px;
+  }
+
+  .acoes button {
+    width: 100%;
+    height: 46px;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,826 @@
+/* ==========================
+   RESET
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#eef2f7;
+    color:#222;
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+header{
+    width:100%;
+    height:100px;
+    background:#fff;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 40px;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+
+
+
+.logo img{
+    width:290px;
+    height:auto;
+}
+
+nav{
+    display:flex;
+    gap:25px;
+}
+
+nav a{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    text-decoration:none;
+    color:#444;
+    padding:12px 22px;
+    border-radius:12px;
+    transition:.3s;
+    font-size:18px;
+}
+
+nav a:hover{
+    background:#edf5ff;
+}
+
+nav .active{
+    background:#1565b1;
+    color:#fff;
+}
+
+.perfil i{
+    font-size:55px;
+    color:#666;
+}
+
+/* ==========================================================================
+   MENU HAMBÚRGUER (MOBILE)
+   ========================================================================== */
+
+.menu-toggle {
+  display: none;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-toggle span {
+  width: 28px;
+  height: 3px;
+  background: #333;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(10px, 10px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+nav.desktop-nav {
+  display: flex;
+}
+
+nav.mobile-menu {
+  opacity: 0;
+  display: none;
+  position: fixed;
+  top: 100px;
+  left: 0;
+  right: 0;
+  background: white;
+  flex-direction: column;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 0;
+  z-index: 999;
+}
+
+nav.mobile-menu.active {
+  opacity: 1;
+  max-height: 400px;
+  padding: 10px 0;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+nav.mobile-menu a {
+  width: 100%;
+  padding: 14px 20px;
+  border-radius: 0;
+  border-bottom: 1px solid #eee;
+  justify-content: flex-start;
+  font-size: 16px;
+}
+
+/* ==========================
+   MAIN
+========================== */
+
+main{
+    width:1200px;
+    margin:40px auto;
+}
+
+.titulo{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.titulo h1{
+    font-size:42px;
+    font-weight:500;
+}
+
+.titulo p{
+    font-size:22px;
+    color:#666;
+}
+
+/* ==========================
+   CONTEÚDO
+========================== */
+
+.conteudo{
+    display:flex;
+    justify-content:space-between;
+    gap:60px;
+}
+
+.card{
+    flex:1;
+    background:#fff;
+    border-radius:25px;
+    padding:35px;
+    border:1px solid #7aa6d8;
+    box-shadow:0 12px 30px rgba(0,0,0,.18);
+}
+
+/* ==========================
+   TÍTULO DOS CARDS
+========================== */
+
+.card h2{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin-bottom:35px;
+    font-size:30px;
+    font-weight:500;
+}
+
+.card h2 i{
+    color:#1565b1;
+}
+
+/* ==========================
+   FORMULÁRIO
+========================== */
+
+.campo{
+    margin-bottom:20px;
+}
+
+.campo label{
+    display:block;
+    margin-bottom:8px;
+    font-size:18px;
+}
+
+.input{
+    display:flex;
+    align-items:center;
+    border:1px solid #cfd8e4;
+    border-radius:8px;
+    overflow:hidden;
+}
+
+.input i{
+    width:50px;
+    text-align:center;
+    color:#1565b1;
+}
+
+.input input,
+.input select{
+    width:100%;
+    height:48px;
+    border:none;
+    outline:none;
+    font-size:16px;
+    background:transparent;
+}
+
+.formulario button{
+    margin-top:20px;
+    width:100%;
+    height:58px;
+    border:none;
+    border-radius:10px;
+    background:#1565b1;
+    color:#fff;
+    font-size:22px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.formulario button:hover{
+    background:#0f4f8d;
+}
+
+/* ==========================
+   RESULTADO
+========================== */
+
+.dados{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:20px;
+}
+
+.informacoes{
+    display:flex;
+    flex-direction:column;
+    gap:40px;
+}
+
+.item{
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+.item i{
+    font-size:38px;
+    color:#1565b1;
+}
+
+.item strong{
+    display:block;
+    font-size:20px;
+}
+
+.item span{
+    color:#555;
+    font-size:18px;
+}
+
+/* ==========================
+   SENHA
+========================== */
+
+.senha{
+    width:280px;
+    height:290px;
+    background:#1565b1;
+    color:#fff;
+    border-radius:30px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.senha h3{
+    font-size:32px;
+    font-weight:400;
+    margin-bottom:20px;
+}
+
+.senha span{
+    font-size:110px;
+    font-weight:300;
+}
+
+/* ==========================
+   DOWNLOAD
+========================== */
+
+.download{
+    margin-top:35px;
+    text-align:center;
+}
+
+.download button{
+    border:none;
+    background:#efefef;
+    border-radius:20px;
+    padding:10px 25px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.download button:hover{
+    background:#ddd;
+}
+
+/* ==========================
+   RESPONSIVO
+========================== */
+
+@media(max-width:1200px){
+
+main{
+    width:95%;
+}
+
+.conteudo{
+    flex-direction:column;
+}
+
+header{
+    flex-direction:column;
+    height:auto;
+    padding:20px;
+    gap:20px;
+}
+
+nav{
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.logo img{
+    width:240px;
+}
+
+}
+
+@media(max-width:768px){
+
+.card{
+    padding:25px;
+}
+
+.dados{
+    flex-direction:column;
+    gap:30px;
+}
+
+.senha{
+    width:100%;
+    height:220px;
+}
+
+.senha span{
+    font-size:80px;
+}
+
+.titulo h1{
+    font-size:30px;
+}
+
+.titulo p{
+    font-size:18px;
+}
+
+.card h2{
+    font-size:22px;
+}
+
+}
+/* Mensagem de status (agendamento em análise) */
+.mensagem{
+    margin-top:35px;
+    background:#edf1f7;
+    border-radius:12px;
+    padding:15px 20px;
+}
+
+.mensagem p{
+    color:#4472ad;
+    font-size:17px;
+    line-height:1.45;
+    margin-bottom:10px;
+}
+
+.mensagem p:last-child{
+    margin-bottom:0;
+}
+
+.voltar{
+    display:flex;
+    justify-content:center;
+    margin-top:30px;
+}
+
+.voltar button{
+    background:#2d6db4;
+    color:white;
+    border:none;
+    border-radius:12px;
+    padding:14px 40px;
+    font-size:16px;
+    font-weight:500;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.voltar button:hover{
+    background:#245995;
+    transform:translateY(-2px);
+}
+
+/* ==========================
+   RESPONSIVIDADE ADICIONAL - TABLET (até 880px)
+========================== */
+
+@media (max-width: 880px) {
+  header {
+    padding: 0 30px;
+    gap: 15px;
+  }
+
+  .logo img {
+    width: 220px;
+  }
+
+  nav {
+    gap: 15px;
+  }
+
+  nav a {
+    font-size: 16px;
+    padding: 10px 14px;
+  }
+
+  main {
+    width: 98%;
+    margin: 32px auto;
+  }
+
+  .titulo h1 {
+    font-size: 38px;
+  }
+
+  .titulo p {
+    font-size: 18px;
+  }
+
+  .conteudo {
+    gap: 50px;
+  }
+
+  .card {
+    padding: 30px;
+  }
+
+  .card h2 {
+    font-size: 26px;
+    margin-bottom: 28px;
+  }
+
+  .senha {
+    width: 260px;
+    height: 270px;
+  }
+
+  .senha span {
+    font-size: 100px;
+  }
+}
+
+/* ==========================
+   RESPONSIVIDADE ADICIONAL - MOBILE (até 760px)
+========================== */
+
+@media (max-width: 760px) {
+  header {
+    padding: 12px 16px;
+    height: auto;
+    flex-direction: row;
+    gap: 12px;
+    flex-wrap: nowrap;
+  }
+
+  .logo img {
+    width: 180px;
+    flex-shrink: 0;
+  }
+
+  nav.desktop-nav {
+    display: none !important;
+  }
+
+  .menu-toggle {
+    display: flex;
+    order: 2;
+    margin-left: auto;
+  }
+
+  .perfil {
+    order: 3;
+    flex-shrink: 0;
+  }
+
+  .perfil i {
+    font-size: 32px;
+  }
+
+  nav.mobile-menu {
+    display: flex;
+  }
+
+  nav.mobile-menu.active {
+    max-height: 400px;
+    padding: 10px 0;
+  }
+
+  nav.mobile-menu a {
+    width: 100%;
+    padding: 14px 20px;
+    border-radius: 0;
+    border-bottom: 1px solid #eee;
+  }
+
+  nav.mobile-menu a:last-child {
+    border-bottom: none;
+  }
+
+  main {
+    width: 100%;
+    padding: 0 10px;
+    margin: 16px auto;
+  }
+
+  .titulo {
+    margin-bottom: 24px;
+  }
+
+  .titulo h1 {
+    font-size: 28px;
+  }
+
+  .titulo p {
+    font-size: 16px;
+  }
+
+  .conteudo {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .card {
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .card h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    gap: 12px;
+  }
+
+  .campo {
+    margin-bottom: 16px;
+  }
+
+  .campo label {
+    font-size: 15px;
+    margin-bottom: 6px;
+  }
+
+  .input input,
+  .input select {
+    height: 44px;
+    font-size: 14px;
+  }
+
+  .formulario button {
+    height: 50px;
+    font-size: 16px;
+    margin-top: 16px;
+  }
+
+  .informacoes {
+    gap: 24px;
+  }
+
+  .item {
+    gap: 12px;
+  }
+
+  .item i {
+    font-size: 32px;
+  }
+
+  .item strong {
+    font-size: 16px;
+  }
+
+  .item span {
+    font-size: 14px;
+  }
+
+  .dados {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .senha {
+    width: 100%;
+    height: 200px;
+    padding: 20px;
+  }
+
+  .senha h3 {
+    font-size: 24px;
+  }
+
+  .senha span {
+    font-size: 70px;
+  }
+
+  .mensagem {
+    margin-top: 20px;
+    padding: 12px 16px;
+  }
+
+  .mensagem p {
+    font-size: 14px;
+  }
+
+  .voltar button {
+    padding: 12px 32px;
+    font-size: 14px;
+  }
+}
+
+/* ==========================
+   RESPONSIVIDADE ADICIONAL - MOBILE PEQUENO (até 480px)
+========================== */
+
+@media (max-width: 480px) {
+  header {
+    padding: 10px 12px;
+    gap: 8px;
+  }
+
+  .logo img {
+    width: 140px;
+  }
+
+  nav {
+    gap: 6px;
+  }
+
+  nav a {
+    font-size: 11px;
+    padding: 6px 8px;
+  }
+
+  nav a i {
+    font-size: 16px;
+  }
+
+  .perfil i {
+    font-size: 28px;
+  }
+
+  main {
+    width: 100%;
+    padding: 0 10px;
+    margin: 16px auto;
+  }
+
+  .titulo {
+    margin-bottom: 16px;
+  }
+
+  .titulo h1 {
+    font-size: 22px;
+  }
+
+  .titulo p {
+    font-size: 14px;
+  }
+
+  .conteudo {
+    gap: 16px;
+  }
+
+  .card {
+    padding: 16px;
+  }
+
+  .card h2 {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+
+  .campo {
+    margin-bottom: 12px;
+  }
+
+  .campo label {
+    font-size: 13px;
+  }
+
+  .input {
+    border-radius: 6px;
+  }
+
+  .input i {
+    width: 40px;
+    font-size: 14px;
+  }
+
+  .input input,
+  .input select {
+    height: 40px;
+    font-size: 13px;
+  }
+
+  .formulario button {
+    height: 46px;
+    font-size: 14px;
+    margin-top: 12px;
+  }
+
+  .informacoes {
+    gap: 20px;
+  }
+
+  .item {
+    gap: 10px;
+  }
+
+  .item i {
+    font-size: 28px;
+  }
+
+  .item strong {
+    font-size: 14px;
+  }
+
+  .item span {
+    font-size: 12px;
+  }
+
+  .dados {
+    gap: 16px;
+  }
+
+  .senha {
+    height: 180px;
+    padding: 16px;
+  }
+
+  .senha h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  .senha span {
+    font-size: 60px;
+  }
+
+  .mensagem {
+    margin-top: 16px;
+    padding: 10px 12px;
+  }
+
+  .mensagem p {
+    font-size: 12px;
+  }
+
+  .download button {
+    padding: 8px 20px;
+    font-size: 14px;
+  }
+
+  .voltar button {
+    padding: 10px 24px;
+    font-size: 13px;
+  }
+}
