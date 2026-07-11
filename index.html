@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light only">
+  <title>Mais Acesso + Saúde | Entrar</title>
+  <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+
+  <div class="page-wrapper">
+
+    <!-- Logo -->
+    <div class="logo-container">
+      <img src="assets/logo.png" alt="Mais Acesso + Saúde" class="logo">
+    </div>
+
+    <!-- Card principal -->
+    <main class="card">
+
+      <!-- ===================== FORMULÁRIO DE LOGIN ===================== -->
+      <section class="form-panel" id="loginPanel">
+        <h1 class="title">Bem - Vinda(o)</h1>
+        <p class="subtitle">Faça login para acessar sua conta e acompanhar seus atendimentos</p>
+
+        <form id="loginForm" novalidate>
+
+          <!-- Campo Email -->
+          <div class="field-group">
+            <label for="loginEmail">Email</label>
+            <div class="input-wrapper">
+              <span class="input-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <rect x="3" y="5" width="18" height="14" rx="2"/>
+                  <path d="M3 7l9 6 9-6"/>
+                </svg>
+              </span>
+              <input type="email" id="loginEmail" name="email" placeholder="Digite seu email" autocomplete="email">
+            </div>
+            <span class="error-message" id="loginEmailError"></span>
+          </div>
+
+          <!-- Campo Senha -->
+          <div class="field-group">
+            <label for="loginPassword">Senha</label>
+            <div class="input-wrapper">
+              <span class="input-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <rect x="4" y="10" width="16" height="10" rx="2"/>
+                  <path d="M7 10V7a5 5 0 0110 0v3"/>
+                </svg>
+              </span>
+              <input type="password" id="loginPassword" name="password" placeholder="Digite sua senha" autocomplete="current-password">
+              <button type="button" class="toggle-password" data-target="loginPassword" aria-label="Mostrar senha">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/>
+                  <circle cx="12" cy="12" r="3"/>
+                </svg>
+              </button>
+            </div>
+            <span class="error-message" id="loginPasswordError"></span>
+            <a href="#" class="forgot-password">Esqueci minha senha</a>
+          </div>
+
+          <!-- TODO: Inserir aqui futuramente a função de autenticação (login) via API -->
+          <button type="submit" class="btn-primary">Entrar</button>
+
+          <p class="switch-text">
+            Não possui conta?
+            <a href="#" id="goToRegister" class="switch-link">Criar conta</a>
+          </p>
+
+        </form>
+      </section>
+
+      <!-- ===================== FORMULÁRIO DE CADASTRO ===================== -->
+      <section class="form-panel form-panel--hidden" id="registerPanel">
+        <h1 class="title">Bem - Vinda(o)</h1>
+        <p class="subtitle">Preencha os dados para criar sua conta e acompanhar seus atendimentos</p>
+
+        <form id="registerForm" novalidate>
+
+          <div class="row-fields">
+            <!-- Campo Nome completo -->
+            <div class="field-group">
+              <label for="registerName">Nome completo</label>
+              <div class="input-wrapper">
+                <span class="input-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                    <circle cx="12" cy="8" r="4"/>
+                    <path d="M4 20c0-4 4-6 8-6s8 2 8 6"/>
+                  </svg>
+                </span>
+                <input type="text" id="registerName" name="name" placeholder="Digite seu nome" autocomplete="name">
+              </div>
+              <span class="error-message" id="registerNameError"></span>
+            </div>
+
+            <!-- Campo CPF -->
+            <div class="field-group">
+              <label for="registerCpf">CPF</label>
+              <div class="input-wrapper">
+                <span class="input-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                    <rect x="3" y="4" width="14" height="16" rx="2"/>
+                    <circle cx="8" cy="9" r="1.5"/>
+                    <path d="M5.5 14.5c0-1.7 1.2-2.5 2.5-2.5s2.5.8 2.5 2.5M12 8h3M12 12h3M12 16h3"/>
+                  </svg>
+                </span>
+                <input type="text" id="registerCpf" name="cpf" placeholder="Digite seu CPF" inputmode="numeric" maxlength="14">
+              </div>
+              <span class="error-message" id="registerCpfError"></span>
+            </div>
+          </div>
+
+          <!-- Campo E-mail -->
+          <div class="field-group">
+            <label for="registerEmail">E-mail</label>
+            <div class="input-wrapper">
+              <span class="input-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <rect x="3" y="5" width="18" height="14" rx="2"/>
+                  <path d="M3 7l9 6 9-6"/>
+                </svg>
+              </span>
+              <input type="email" id="registerEmail" name="email" placeholder="Digite seu e-mail" autocomplete="email">
+            </div>
+            <span class="error-message" id="registerEmailError"></span>
+          </div>
+
+          <!-- Campo Senha -->
+          <div class="field-group">
+            <label for="registerPassword">Senha</label>
+            <div class="input-wrapper">
+              <span class="input-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <rect x="4" y="10" width="16" height="10" rx="2"/>
+                  <path d="M7 10V7a5 5 0 0110 0v3"/>
+                </svg>
+              </span>
+              <input type="password" id="registerPassword" name="password" placeholder="Digite sua senha" autocomplete="new-password">
+              <button type="button" class="toggle-password" data-target="registerPassword" aria-label="Mostrar senha">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/>
+                  <circle cx="12" cy="12" r="3"/>
+                </svg>
+              </button>
+            </div>
+            <span class="error-message" id="registerPasswordError"></span>
+          </div>
+
+          <!-- TODO: Inserir aqui futuramente a função de cadastro (registro) via API -->
+          <button type="submit" class="btn-primary">Criar conta</button>
+
+          <p class="switch-text">
+            Já possui conta?
+            <a href="#" id="goToLogin" class="switch-link">Entrar</a>
+          </p>
+
+        </form>
+      </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+      <span class="footer-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+          <path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"/>
+          <path d="M9 12l2 2 4-4"/>
+        </svg>
+      </span>
+      <p>Seus dados estão protegidos e são utilizados apenas para controle de atendimento.</p>
+    </footer>
+
+  </div>
+
+  <script src="js/login.js"></script>
+</body>
+</html>

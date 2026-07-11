@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light only">
+    <title>Dias Disponíveis | Mais Acesso + Saúde</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/disponivel.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div class="logo">
+            <a href="home.html"><img src="assets/logo.png" alt="Mais Acesso Saúde"></a>
+        </div>
+
+        <nav class="desktop-nav">
+
+            <a href="home.html">
+                <i class="fa-solid fa-house"></i>
+                Início
+            </a>
+
+            <a href="agendar.html">
+                <i class="fa-regular fa-calendar"></i>
+                Agendar
+            </a>
+
+            <a href="disponivel.html" class="active">
+                <i class="fa-regular fa-calendar-days"></i>
+                Dias disponíveis
+            </a>
+
+            <a href="acompanhamento.html">
+                <i class="fa-regular fa-clock"></i>
+                Acompanhamento
+            </a>
+
+        </nav>
+
+        <nav class="mobile-menu">
+
+            <a href="home.html">
+                <i class="fa-solid fa-house"></i>
+                Início
+            </a>
+
+            <a href="agendar.html">
+                <i class="fa-regular fa-calendar"></i>
+                Agendar
+            </a>
+
+            <a href="disponivel.html" class="active">
+                <i class="fa-regular fa-calendar-days"></i>
+                Dias disponíveis
+            </a>
+
+            <a href="acompanhamento.html">
+                <i class="fa-regular fa-clock"></i>
+                Acompanhamento
+            </a>
+
+        </nav>
+
+        <button class="menu-toggle" aria-label="Abrir menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="perfil">
+            <i class="fa-solid fa-circle-user"></i>
+        </div>
+
+    </header>
+
+    <script src="js/menu-mobile.js"></script>
+
+    <!-- ================= MAIN ================= -->
+
+    <main>
+
+        <h1>DIAS E HORÁRIOS DISPONÍVEIS</h1>
+
+        <section class="container">
+
+            <!-- Campo -->
+
+            <label>
+                Digite a localidade que deseja consultar:
+            </label>
+
+            <input
+                type="text"
+                placeholder="Digite aqui">
+
+            <!-- Datas -->
+
+            <h3>Selecionar data</h3>
+
+            <div class="datas">
+
+                <button class="dia ativo">
+                    <span>Seg</span>
+                    <strong>20</strong>
+                    <small>Maio</small>
+                </button>
+
+                <button class="dia">
+                    <span>Ter</span>
+                    <strong>21</strong>
+                    <small>Maio</small>
+                </button>
+
+                <button class="dia">
+                    <span>Qua</span>
+                    <strong>22</strong>
+                    <small>Maio</small>
+                </button>
+
+                <button class="dia">
+                    <span>Qui</span>
+                    <strong>23</strong>
+                    <small>Maio</small>
+                </button>
+
+                <button class="dia">
+                    <span>Sex</span>
+                    <strong>24</strong>
+                    <small>Maio</small>
+                </button>
+
+                <button class="proximo">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </div>
+
+            <!-- Horários -->
+
+            <h3>
+                Horários disponíveis para segunda-feira, 20 de maio
+            </h3>
+
+            <div class="horarios">
+
+                <button class="horario selecionado">08:00</button>
+                <button class="horario selecionado">09:30</button>
+                <button class="horario">14:30</button>
+                <button class="horario selecionado">15:00</button>
+                <button class="horario selecionado">15:30</button>
+                <button class="horario">16:00</button>
+                <button class="horario">16:30</button>
+                <button class="horario">17:00</button>
+
+            </div>
+
+        </section>
+
+        <!-- Botões -->
+
+        <div class="acoes">
+
+            <button class="voltar">
+                Voltar
+            </button>
+
+            <button class="agendar">
+                Realizar agendamento
+            </button>
+
+        </div>
+
+    </main>
+
+    <!-- JS -->
+
+    <script src="js/disponivel.js"></script>
+
+</body>
+</html>

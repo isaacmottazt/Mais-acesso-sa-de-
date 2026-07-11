@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light only">
+
+    <title>Acompanhamento | Mais Acesso + Saúde</title>
+
+    <link rel="stylesheet" href="css/acompanhamento.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+<header>
+
+    <div class="logo">
+        <a href="home.html"><img src="assets/logo.png" alt="Mais Acesso Saúde"></a>
+    </div>
+
+    <nav class="desktop-nav">
+
+        <a href="home.html">
+            <i class="fa-solid fa-house"></i>
+            Início
+        </a>
+
+        <a href="agendar.html">
+            <i class="fa-regular fa-calendar"></i>
+            Agendar
+        </a>
+
+        <a href="disponivel.html">
+            <i class="fa-regular fa-calendar-days"></i>
+            Dias disponíveis
+        </a>
+
+        <a href="acompanhamento.html" class="active">
+            <i class="fa-regular fa-clock"></i>
+            Acompanhamento
+        </a>
+
+    </nav>
+
+    <nav class="mobile-menu">
+
+        <a href="home.html">
+            <i class="fa-solid fa-house"></i>
+            Início
+        </a>
+
+        <a href="agendar.html">
+            <i class="fa-regular fa-calendar"></i>
+            Agendar
+        </a>
+
+        <a href="disponivel.html">
+            <i class="fa-regular fa-calendar-days"></i>
+            Dias disponíveis
+        </a>
+
+        <a href="acompanhamento.html" class="active">
+            <i class="fa-regular fa-clock"></i>
+            Acompanhamento
+        </a>
+
+    </nav>
+
+    <button class="menu-toggle" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <div class="perfil">
+        <i class="fa-solid fa-circle-user"></i>
+    </div>
+
+</header>
+
+<script src="js/menu-mobile.js"></script>
+
+<main>
+
+    <div class="titulo">
+
+        <h1>VERIFICAÇÃO DE AGENDAMENTO</h1>
+
+        <p>Consulte os detalhes do seu atendimento</p>
+
+    </div>
+
+    <section class="conteudo">
+
+        <!-- FORMULÁRIO -->
+
+        <div class="card formulario">
+
+            <h2>
+                <i class="fa-regular fa-user"></i>
+                INFORMAÇÕES PARA A CONSULTA
+            </h2>
+
+            <form id="formVerificacao">
+
+                <div class="campo">
+                    <label>Nome completo:</label>
+                    <div class="input">
+                        <i class="fa-regular fa-user"></i>
+                        <input type="text" id="nomeVerificacao" placeholder="Digite seu nome completo">
+                    </div>
+                </div>
+
+                <div class="campo">
+                    <label>Tipo de exame:</label>
+                    <div class="input">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <select id="exameVerificacao">
+                            <option value="">Selecionar exame</option>
+                            <option>Hemograma</option>
+                            <option>Raio X</option>
+                            <option>Ultrassom</option>
+                            <option>Tomografia</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="campo">
+                    <label>Localidade do agendamento:</label>
+                    <div class="input">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <input type="text" id="localVerificacao" placeholder="Digite a localidade">
+                    </div>
+                </div>
+
+                <button type="submit">
+                    Consultar agendamento
+                </button>
+
+            </form>
+
+        </div>
+
+        <!-- RESULTADO: EM ANÁLISE -->
+
+        <div class="card resultado" id="resultadoAnalise" style="display:none;">
+
+            <h2>
+                <i class="fa-regular fa-hourglass-half"></i>
+                DADOS DA CONSULTA
+            </h2>
+
+            <div class="mensagem">
+
+                <p>Recebemos seus dados e eles estão em processo de validação.</p>
+
+                <p>Assim que a análise for concluída, você poderá consultar as informações do seu atendimento.</p>
+
+                <p><b>Paciente:</b> <span id="msgNome"></span></p>
+                <p><b>Exame:</b> <span id="msgExame"></span></p>
+                <p><b>Local:</b> <span id="msgLocal"></span></p>
+
+            </div>
+
+        </div>
+
+        <!-- RESULTADO: CONFIRMADO -->
+
+        <div class="card resultado" id="resultadoConfirmado" style="display:none;">
+
+            <h2>
+                <i class="fa-regular fa-circle-check"></i>
+                DADOS DA CONSULTA
+            </h2>
+
+            <div class="dados">
+
+                <div class="informacoes">
+
+                    <div class="item">
+                        <i class="fa-regular fa-calendar"></i>
+                        <div>
+                            <strong>Data</strong>
+                            <span id="dadoData">23/05/2026</span>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <i class="fa-regular fa-clock"></i>
+                        <div>
+                            <strong>Horário</strong>
+                            <span id="dadoHorario">15h30</span>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <i class="fa-solid fa-lock"></i>
+                        <div>
+                            <strong>Senha</strong>
+                            <span id="dadoSenhaTexto">Nº 15</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="senha">
+                    <h3>SUA SENHA</h3>
+                    <span id="dadoSenha">15</span>
+                </div>
+
+            </div>
+
+            <div class="download">
+                <button type="button" id="btnDownload">
+                    <i class="fa-solid fa-download"></i>
+                    Download
+                </button>
+            </div>
+
+        </div>
+
+    </section>
+
+    <div class="voltar">
+        <button type="button" id="btnVoltarAcompanhamento">
+            Voltar
+        </button>
+    </div>
+
+</main>
+
+<script src="js/acompanhamento.js"></script>
+
+</body>
+</html>
